@@ -38,8 +38,9 @@ var gzip = false;
 
 var outputDirectory = 'output';
 
-var latitude = Math.PI * 105.781027 / 180;
-var longitude = Math.PI * 21.018091 / 180;
+var latitude = Math.PI * 21.017720 / 180;
+var longitude = Math.PI * 105.780888 / 180;
+
 var tileWidth = 100.0;
 
 var longitudeExtent = metersToLongitude(tileWidth, latitude);
@@ -103,8 +104,9 @@ Promise.all(promises)
 
 function createTilesetWithTransforms() {
 
-var long = Math.PI * 21.018091 / 180;
-var lat = Math.PI * 105.781027 / 180;
+var lat = Math.PI * 21.017720 / 180;
+var long = Math.PI * 105.780888 / 180;
+
 console.log('lat', lat);
 console.log('long', long);
 
