@@ -38,8 +38,8 @@ var gzip = false;
 
 var outputDirectory = 'output';
 
-var latitude = Math.PI * 21.017720 / 180;
-var longitude = Math.PI * 105.780888 / 180;
+var latitude = Math.PI * 21.017981 / 180;
+var longitude = Math.PI * 105.780984 / 180;
 
 var tileWidth = 100.0;
 
@@ -62,7 +62,7 @@ var buildingTemplate = {
     latitude : latitude
 };
 
-var buildingsTransform = wgs84Transform(longitude, latitude, 0); // height is 0.0 because the base of building models is at the origin
+var buildingsTransform = wgs84Transform(longitude, latitude, -20); // height is 0.0 because the base of building models is at the origin
 var buildingsCenter = [buildingsTransform[12], buildingsTransform[13], buildingsTransform[14]];
 
 // Small buildings
@@ -104,8 +104,8 @@ Promise.all(promises)
 
 function createTilesetWithTransforms() {
 
-var lat = Math.PI * 21.017720 / 180;
-var long = Math.PI * 105.780888 / 180;
+var lat = Math.PI * 21.017981 / 180;
+var long = Math.PI * 105.780984 / 180;
 
 console.log('lat', lat);
 console.log('long', long);
@@ -152,7 +152,7 @@ console.log(array);
             geometricError : instancesGeometricError,
             refine : 'REPLACE',
             content : {
-                url : "CeoTower.b3dm"
+                url : "ThreeBulding.b3dm"
             }
         }
     };
